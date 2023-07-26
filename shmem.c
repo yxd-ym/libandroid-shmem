@@ -16,6 +16,10 @@
 
 #include "shm.h"
 
+#ifndef _PATH_TMP
+#define _PATH_TMP "/data/local/tmp/"
+#endif
+
 #define DBG(...) __android_log_print(ANDROID_LOG_INFO, "shmem", __VA_ARGS__)
 #define ASHV_KEY_SYMLINK_PATH _PATH_TMP "ashv_key_%d"
 #define ANDROID_SHMEM_SOCKNAME "/dev/shm/%08x"
